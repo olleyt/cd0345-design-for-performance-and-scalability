@@ -14,14 +14,3 @@ resource "aws_instance" "Udacity_T2" {
     Name = "Udacity T2"
   }
 }
-
-# provision 2 m4.large EC2 instances named Udacity M4
-resource "aws_instance" "Udacity_M4" {
-  count = 2
-  ami = "ami-09d3b3274b6c5d4aa"
-  instance_type = "m4.large"
-  subnet_id = var.public_subnet_id
-  tags = {
-    Name = "Udacity M4"
-  }
-}
