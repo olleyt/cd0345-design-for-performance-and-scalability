@@ -1,0 +1,23 @@
+Estimate summary,,,,,,,,
+Upfront cost,Monthly cost,Total 12 months cost,Currency,,,,,
+0,18340.88,220090.56,USD,,,,,
+,,* Includes upfront cost,,,,,,
+,,,,,,,,
+,,,,,,,,
+Detailed Estimate,,,,,,,,
+Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Configuration summary
+My Estimate,US East (N. Virginia),Web Servers,Amazon EC2,0,2406.72,28880.64,USD,"Operating system (Linux), Quantity (8), Pricing strategy (On-Demand Instances), Storage amount (30 GB), Instance type (a1.4xlarge)"
+My Estimate,US East (N. Virginia),App Servers,Amazon EC2,0,4247.49,50969.88,USD,"Operating system (Linux), Quantity (8), Pricing strategy (On-Demand Instances), Storage amount (30 GB), Instance type (m6gd.4xlarge)"
+My Estimate,US East (N. Virginia),CDN,Amazon CloudFront,0,327.56,3930.72,USD,"Number of requests (HTTPS) (5000000 per month), Data transfer out to internet (3 TB per month), Data transfer out to origin (3 TB per month)"
+My Estimate,US East (N. Virginia),Static data for web site,S3 Standard,0,173.84,2086.08,USD,S3 Standard storage (6 TB per month)
+My Estimate,US East (N. Virginia),Static data for web site,Data Transfer,0,61.44,737.28,USD,"DT Inbound: Not selected (0 TB per month), DT Outbound: All other regions (3 TB per month)"
+My Estimate,US East (N. Virginia),VPC,VPN Connection,0,0,0,USD,"Working days per month (22), Number of subnet associations ()"
+My Estimate,US East (N. Virginia),VPC,Network Address Translation (NAT) Gateway,0,342.18,4106.16,USD,Number of NAT Gateways (2)
+My Estimate,US East (N. Virginia),Database,Amazon Aurora PostgreSQL-Compatible DB,0,10781.65,129379.8,USD,"Quantity (3), Instance type (db.r4.8xlarge), Pricing strategy (OnDemand), Storage amount (5 TB), Additional backup storage (5 TB)"
+,,,,,,,,
+Notes on changes compared to the initial budget:,,,,,,,,
+,,,1) the application is now deployed across 2 regions and 4 availability zones in each region,,,,,
+,,,2) Applictaion in the second region will be used for a warm standby disaster recovery strategy ,,,,,
+,,,"3) in addition, the running application in us-east-1 region will benefit from autoscaling to 4 web servers and 4 app servers to address spiky traffic ",,,,,
+Acknowledgement,,,,,,,,
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services.",,,,,,,,
